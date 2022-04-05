@@ -97,6 +97,12 @@ export const presets = {
     color: color.palette.greyScale,
     fontWeight: "600",
   } as TextStyle,
+  bodyLargeSemiBold: {
+    fontFamily: typography.sfProDisplaySemiBold,
+    fontSize: 16,
+    color: color.palette.greyScale,
+    fontWeight: "500",
+  } as TextStyle,
   bodyLargeRegular: {
     fontFamily: typography.sfProDisplay,
     fontSize: 16,

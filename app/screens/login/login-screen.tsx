@@ -1,6 +1,6 @@
 import React from "react"
 import { View, StyleSheet } from "react-native"
-import { Screen, TextField, Header, Text, Button } from "../../components"
+import { Screen, TextField, Header, Text, Button, Checkbox } from "../../components"
 
 import { color, spacing, globalStyle, typography } from "../../theme"
 
@@ -25,6 +25,11 @@ export const LoginScreen = () => {
 
         <TextField preset="withLeftIcon" icon="email" rightIcon="lock" placeholder="Email" />
         <TextField preset="withLeftRightIcon" icon="lock" rightIcon="hide" placeholder="Password" />
+        <View style={styles.checkboxRememberWrapper}>
+          <Checkbox text="Remember me" />
+          <Button textStyle={styles.rememberMe} preset="link" text="Forgot Password?" />
+        </View>
+
         <Button style={styles.button} text="Sign In" />
         <View style={styles.lineWrapper}>
           <View style={styles.line} />
@@ -65,7 +70,10 @@ const styles = StyleSheet.create({
     flexDirection: "row",
   },
   button: {
-    marginVertical: spacing[4],
+    marginVertical: spacing[1],
+  },
+  checkboxRememberWrapper: {
+    ...globalStyle.rowAlignBetweenBaseline,
   },
   facebookButton: {
     marginHorizontal: spacing[6],
@@ -84,6 +92,11 @@ const styles = StyleSheet.create({
   lineWrapper: {
     ...globalStyle.rowBetween,
     marginVertical: spacing[5],
+  },
+  rememberMe: {
+    color: color.palette.redMain,
+    fontFamily: typography.sfProDisplaySemiBold,
+    fontSize: 16,
   },
   signinText: {
     color: color.palette.redMain,

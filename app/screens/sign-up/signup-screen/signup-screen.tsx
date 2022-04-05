@@ -1,8 +1,8 @@
 import React from "react"
 import { View, StyleSheet } from "react-native"
-import { Screen, TextField, Header, Text, Button } from "../../components"
+import { Screen, TextField, Header, Text, Button } from "../../../components"
 
-import { color, spacing, globalStyle, typography } from "../../theme"
+import { color, spacing, globalStyle, typography } from "../../../theme"
 
 export const SignUpScreen = () => {
   return (

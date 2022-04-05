@@ -4,5 +4,5 @@ export * from "./demo/demo-list-screen"
 export * from "./error/error-boundary"
 // export other screens here
 export * from "./home/home-screen"
-export * from "./sign-up/sign-up"
+export * from "./sign-up"
 export * from "./login/login-screen"
