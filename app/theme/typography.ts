@@ -28,4 +28,17 @@ export const typography = {
    * Lets get fancy with a monospace font!
    */
   code: Platform.select({ ios: "Courier", android: "monospace" }),
+
+  // gillSans: Platform.select({ ios: "GillSans", android: "GillSans" }),
+
+  sfProDisplay: Platform.select({ ios: "SFProDisplay", android: "SFProDisplay" }),
+  sfProDisplayBold: Platform.select({ ios: "SFProDisplay-Bold", android: "SFProDisplay-Bold" }),
+  sfProDisplaySemiBold: Platform.select({
+    ios: "SFProDisplay-SemiBold",
+    android: "SFProDisplay-SemiBold",
+  }),
+  sfProDisplayMedium: Platform.select({
+    ios: "SFProDisplay-Medium",
+    android: "SFProDisplay-Medium",
+  }),
 }
