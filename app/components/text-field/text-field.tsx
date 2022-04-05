@@ -1,65 +1,21 @@
 import React from "react"
-import { StyleProp, TextInput, TextInputProps, TextStyle, View, ViewStyle } from "react-native"
+import { TextInput, View, ViewStyle, StyleSheet } from "react-native"
+import { translate } from "../../i18n"
+import { Icon } from "../"
+import { TextFieldProps } from "./text-field.props"
+
 import { color, spacing, typography } from "../../theme"
-import { translate, TxKeyPath } from "../../i18n"
-import { Text } from "../text/text"
 
-// the base styling for the container
-const CONTAINER: ViewStyle = {
-  paddingVertical: spacing[3],
-}
-
-// the base styling for the TextInput
-const INPUT: TextStyle = {
-  fontFamily: typography.primary,
-  color: color.text,
-  minHeight: 44,
-  fontSize: 18,
-  backgroundColor: color.palette.white,
-}
-
-// currently we have no presets, but that changes quickly when you build your app.
-const PRESETS: { [name: string]: ViewStyle } = {
+export const PRESETS: { [name: string]: ViewStyle } = {
   default: {},
-}
-
-export interface TextFieldProps extends TextInputProps {
-  /**
-   * The placeholder i18n key.
-   */
-  placeholderTx?: TxKeyPath
-
-  /**
-   * The Placeholder text if no placeholderTx is provided.
-   */
-  placeholder?: string
-
-  /**
-   * The label i18n key.
-   */
-  labelTx?: TxKeyPath
-
-  /**
-   * The label text if no labelTx is provided.
-   */
-  label?: string
-
-  /**
-   * Optional container style overrides useful for margins & padding.
-   */
-  style?: StyleProp<ViewStyle>
-
-  /**
-   * Optional style overrides for the input.
-   */
-  inputStyle?: StyleProp<TextStyle>
-
-  /**
-   * Various look & feels.
-   */
-  preset?: keyof typeof PRESETS
-
-  forwardedRef?: any
+  withLeftIcon: {
+    flexDirection: "row",
+    alignItems: "center",
+  },
+  withLeftRightIcon: {
+    flexDirection: "row",
+    alignItems: "center",
+  },
 }
 
 /**
@@ -69,30 +25,70 @@ export function TextField(props: TextFieldProps) {
   const {
     placeholderTx,
     placeholder,
-    labelTx,
-    label,
     preset = "default",
     style: styleOverride,
     inputStyle: inputStyleOverride,
     forwardedRef,
+    icon,
+    rightIcon,
+    iconStyle,
+    contentContainerStyle,
     ...rest
   } = props
 
-  const containerStyles = [CONTAINER, PRESETS[preset], styleOverride]
-  const inputStyles = [INPUT, inputStyleOverride]
+  const containerStyles = [styles.container, PRESETS[preset], styleOverride]
+  const inputStyles = [styles.input, inputStyleOverride]
   const actualPlaceholder = placeholderTx ? translate(placeholderTx) : placeholder
+
+  const iconStyles = [styles.icon, iconStyle]
 
   return (
     <View style={containerStyles}>
-      <Text preset="fieldLabel" tx={labelTx} text={label} />
-      <TextInput
-        placeholder={actualPlaceholder}
-        placeholderTextColor={color.palette.lighterGrey}
-        underlineColorAndroid={color.transparent}
-        {...rest}
-        style={inputStyles}
-        ref={forwardedRef}
-      />
+      {(preset === "withLeftIcon" || preset === "withLeftRightIcon") && (
+        <Icon icon={icon} style={iconStyles} />
+      )}
+      <View style={[styles.contentWrapper, contentContainerStyle]}>
+        <TextInput
+          placeholder={actualPlaceholder}
+          placeholderTextColor={color.palette.greyScale400}
+          underlineColorAndroid={color.transparent}
+          {...rest}
+          style={inputStyles}
+          ref={forwardedRef}
+        />
+      </View>
+      {preset === "withLeftRightIcon" && (
+        <View style={styles.leftIcon}>
+          <Icon icon={rightIcon} style={iconStyles} />
+        </View>
+      )}
     </View>
   )
 }
+
+const styles = StyleSheet.create({
+  container: {
+    borderColor: color.palette.greyscale200,
+    borderRadius: 1000,
+    borderWidth: 1,
+    marginVertical: spacing[2],
+    paddingHorizontal: spacing[3],
+  },
+  contentWrapper: {
+    flex: 1,
+  },
+  icon: { marginHorizontal: spacing[2] },
+  input: {
+    alignSelf: "stretch",
+    backgroundColor: color.palette.white,
+    borderRadius: 14,
+    borderWidth: 0,
+    color: color.palette.greyScale400,
+    fontFamily: typography.sfProDisplay,
+    fontSize: 16,
+    fontWeight: "400",
+    paddingHorizontal: spacing[1],
+    paddingVertical: spacing[4],
+  },
+  leftIcon: { flexDirection: "row-reverse" },
+})

@@ -11,14 +11,24 @@ import { translate } from "../../i18n"
  */
 export function Text(props: TextProps) {
   // grab the props
-  const { preset = "default", tx, txOptions, text, children, style: styleOverride, ...rest } = props
+  const {
+    preset = "default",
+    tx,
+    txOptions,
+    text,
+    children,
+    color,
+    style: styleOverride,
+    ...rest
+  } = props
 
   // figure out which content to use
   const i18nText = tx && translate(tx, txOptions)
   const content = i18nText || text || children
 
+  const colors = color ? { color } : {}
   const style = presets[preset] || presets.default
-  const styles = [style, styleOverride]
+  const styles = [style, colors, styleOverride]
 
   return (
     <ReactNativeText {...rest} style={styles}>

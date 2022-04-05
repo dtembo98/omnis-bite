@@ -1,5 +1,6 @@
 import * as React from "react"
 import { TouchableOpacity } from "react-native"
+import { Icon } from ".."
 import { Text } from "../text/text"
 import { viewPresets, textPresets } from "./button.presets"
 import { ButtonProps } from "./button.props"
@@ -18,6 +19,7 @@ export function Button(props: ButtonProps) {
     style: styleOverride,
     textStyle: textStyleOverride,
     children,
+    icon = "twitter",
     ...rest
   } = props
 
@@ -26,7 +28,12 @@ export function Button(props: ButtonProps) {
   const textStyle = textPresets[preset] || textPresets.primary
   const textStyles = [textStyle, textStyleOverride]
 
-  const content = children || <Text tx={tx} text={text} style={textStyles} />
+  const content =
+    preset === "circle" ? (
+      <Icon icon={icon} />
+    ) : (
+      children || <Text preset="bodyXLarge" tx={tx} text={text} style={textStyles} />
+    )
 
   return (
     <TouchableOpacity style={viewStyles} {...rest}>

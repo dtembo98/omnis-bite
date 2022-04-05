@@ -2,7 +2,7 @@ import * as React from "react"
 import { View, ImageStyle } from "react-native"
 import { AutoImage as Image } from "../auto-image/auto-image"
 import { IconProps } from "./icon.props"
-import { icons } from "./icons"
+import { icons } from "../../../assets/icons"
 
 const ROOT: ImageStyle = {
   resizeMode: "contain",

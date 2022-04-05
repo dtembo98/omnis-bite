@@ -34,4 +34,8 @@ export interface TextProps extends TextProperties {
    * One of the different types of text presets.
    */
   preset?: TextPresets
+  /**
+   * Override the color value
+   */
+  color?: string
 }
