@@ -26,6 +26,8 @@
     "App.js",
     "app",
     "test",
-    "storybook"
-  ]
+    "storybook",
+    "assets"
+  ],
+  "extends": "expo/tsconfig.base"
 }
