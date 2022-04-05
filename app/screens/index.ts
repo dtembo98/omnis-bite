@@ -5,3 +5,4 @@ export * from "./error/error-boundary"
 // export other screens here
 export * from "./home/home-screen"
 export * from "./sign-up/sign-up"
+export * from "./login/login-screen"
