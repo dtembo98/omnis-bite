@@ -12,7 +12,7 @@ Current implemented screens:
 
 4. Code Verification Screen
 
-![Simulator Screen Shot - iPhone 12 - 2022-04-05 at 19 57 54](https://user-images.githubusercontent.com/37314424/162406013-930de8e0-210d-445a-949b-d22a6f91c94e.png)
+
 
 6. Code Confirmation Screen
 
