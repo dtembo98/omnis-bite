@@ -1,18 +1,31 @@
-# Welcome to your new ignited app!
+# Welcome to Omnis Bite
 
-[![CircleCI](https://circleci.com/gh/infinitered/ignite.svg?style=svg)](https://circleci.com/gh/infinitered/ignite)
+Omnis Bite is a food app.
+
+Current immplemented screens:
+
+1. Sign Up
+<img width="290" alt="Screenshot 2022-04-05 at 5 53 29 PM" src="https://user-images.githubusercontent.com/37314424/162404434-d3341aa1-13ad-4120-b755-4256bd36a7b7.png">
+
+2. Login screen
+
+4. Code Verification Screen
+5. Code Confirmation Screen
+
+
+
+
 
 ## The latest and greatest boilerplate for Infinite Red opinions
 
-This is the boilerplate that [Infinite Red](https://infinite.red) uses as a way to test bleeding-edge changes to our React Native stack.
+This is the boilerplate that [Infinite Red](https://infinite.red) uses as a way to test bleedin<img width="290" alt="Screenshot 2022-04-05 at 5 53 29 PM" src="https://user-images.githubusercontent.com/37314424/162404132-f1b2043f-176f-405f-996a-08e32cb3d149.png">
+g-edge changes to our React Native stack.
 
 Currently includes:
 
 - React Native
 - React Navigation
-- MobX State Tree
 - TypeScript
-- And more!
 
 ## Quick Start
 
@@ -113,9 +126,6 @@ This is a great place to put miscellaneous helpers and utilities. Things like da
 
 **app.tsx** This is the entry point to your app. This is where you will find the main App component which renders the rest of the application.
 
-### ./ignite directory
-
-The `ignite` directory stores all things Ignite, including CLI and boilerplate items. Here you will find generators, plugins and examples to help you get started with React Native.
 
 ### ./storybook directory
 
@@ -125,21 +135,4 @@ This is where your stories will be registered and where the Storybook configs wi
 
 This directory will hold your Jest configs and mocks, as well as your [storyshots](https://github.com/storybooks/storybook/tree/master/addons/storyshots) test file. This is a file that contains the snapshots of all your component storybooks.
 
-## Running Storybook
 
-From the command line in your generated app's root directory, enter `yarn run storybook`
-This starts up the storybook server and opens a story navigator in your browser. With your app
-running, choose Toggle Storybook from the developer menu to switch to Storybook; you can then
-use the story navigator in your browser to change stories.
-
-For Visual Studio Code users, there is a handy extension that makes it easy to load Storybook use cases into a running emulator via tapping on items in the editor sidebar. Install the `React Native Storybook` extension by `Orta`, hit `cmd + shift + P` and select "Reconnect Storybook to VSCode". Expand the STORYBOOK section in the sidebar to see all use cases for components that have `.story.tsx` files in their directories.
-
-## Running e2e tests
-
-Read [e2e setup instructions](./e2e/README.md).
-
-## Previous Boilerplates
-
-- [2018 aka Bowser](https://github.com/infinitered/ignite-bowser)
-- [2017 aka Andross](https://github.com/infinitered/ignite-andross)
-- [2016 aka Ignite 1.0](https://github.com/infinitered/ignite-ir-boilerplate-2016)
