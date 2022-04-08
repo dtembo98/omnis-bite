@@ -18,8 +18,7 @@ Current immplemented screens:
 
 ## The latest and greatest boilerplate for Infinite Red opinions
 
-This is the boilerplate that [Infinite Red](https://infinite.red) uses as a way to test bleedin<img width="290" alt="Screenshot 2022-04-05 at 5 53 29 PM" src="https://user-images.githubusercontent.com/37314424/162404132-f1b2043f-176f-405f-996a-08e32cb3d149.png">
-g-edge changes to our React Native stack.
+This is the boilerplate that [Infinite Red](https://infinite.red) uses as a way to test bleeding-edge changes to our React Native stack.
 
 Currently includes:
 
