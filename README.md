@@ -130,12 +130,4 @@ This is a great place to put miscellaneous helpers and utilities. Things like da
 **app.tsx** This is the entry point to your app. This is where you will find the main App component which renders the rest of the application.
 
 
-### ./storybook directory
-
-This is where your stories will be registered and where the Storybook configs will live.
-
-### ./test directory
-
-This directory will hold your Jest configs and mocks, as well as your [storyshots](https://github.com/storybooks/storybook/tree/master/addons/storyshots) test file. This is a file that contains the snapshots of all your component storybooks.
-
 
