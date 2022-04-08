@@ -2,7 +2,7 @@
 
 Omnis Bite is a food app.
 
-Current immplemented screens:
+Current implemented screens:
 
 1. Sign Up
 <img width="290" alt="Screenshot 2022-04-05 at 5 53 29 PM" src="https://user-images.githubusercontent.com/37314424/162404434-d3341aa1-13ad-4120-b755-4256bd36a7b7.png">
