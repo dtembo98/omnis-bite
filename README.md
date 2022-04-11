@@ -15,7 +15,7 @@ Current implemented screens:
 
 
 6. Find Restraunt Screen
-<img width="167" alt="Screenshot 2022-04-11 at 5 56 18 PM" src="https://user-images.githubusercontent.com/37314424/162781565-3f19573e-9c32-4d03-8a76-b3a83d33158b.png">
+<img width="303" alt="Screenshot 2022-04-11 at 5 58 35 PM" src="https://user-images.githubusercontent.com/37314424/162782012-f758a2f8-1c69-4aa7-b747-3227491fbf4e.png">
 
 
 ## The latest and greatest boilerplate for Infinite Red opinions
