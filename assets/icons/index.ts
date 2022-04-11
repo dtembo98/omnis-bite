@@ -12,6 +12,7 @@ export const icons = {
   chevronLeft: require("./chevron-left.png"),
   email: require("./email.png"),
   phone: require("./phone.png"),
+  location: require("./location.png"),
 }
 
 export type IconTypes = keyof typeof icons

@@ -26,6 +26,12 @@ export const presets = {
     width: null, // Have to set these to null because android ¯\_(ツ)_/¯
     height: null,
   } as ImageStyle,
+  center: {
+    ...BASE,
+    resizeMode: "center",
+    width: null, // Have to set these to null because android ¯\_(ツ)_/¯
+    height: null,
+  } as ImageStyle,
 }
 
 /**

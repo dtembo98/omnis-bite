@@ -15,6 +15,8 @@ import {
   HomeScreen,
   LoginScreen,
   VerificationScreen,
+  ConfirmationScreen,
+  FindRestraurantScreen,
 } from "../screens"
 import { navigationRef } from "./navigation-utilities"
 
@@ -37,6 +39,8 @@ export type NavigatorParamList = {
   signup: undefined
   login: undefined
   verification: undefined
+  confirmation: undefined
+  findRestraunrant: undefined
 }
 
 // Documentation: https://reactnavigation.org/docs/stack-navigator/
@@ -48,14 +52,16 @@ const AppStack = () => {
       screenOptions={{
         headerShown: false,
       }}
-      initialRouteName="verification"
+      initialRouteName="findRestraunrant"
     >
-      <Stack.Screen name="verification" component={VerificationScreen} />
+      <Stack.Screen name="findRestraunrant" component={FindRestraurantScreen} />
+      {/* <Stack.Screen name="confirmation" component={ConfirmationScreen} /> */}
+      {/* <Stack.Screen name="verification" component={VerificationScreen} />
       <Stack.Screen name="login" component={LoginScreen} />
       <Stack.Screen name="signup" component={SignUpScreen} />
       <Stack.Screen name="welcome" component={WelcomeScreen} />
       <Stack.Screen name="home" component={HomeScreen} />
-      <Stack.Screen name="demoList" component={DemoListScreen} />
+      <Stack.Screen name="demoList" component={DemoListScreen} /> */}
     </Stack.Navigator>
   )
 }
