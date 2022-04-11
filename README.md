@@ -15,10 +15,7 @@ Current implemented screens:
 
 
 6. Find Restraunt Screen
-
-![Simulator Screen Shot - iPhone 12 - 2022-04-11 at 15 05 11](https://user-images.githubusercontent.com/37314424/162746620-90bba9d7-aa29-45fe-a33e-0067303fd187.png)
-
-
+<img width="167" alt="Screenshot 2022-04-11 at 5 56 18 PM" src="https://user-images.githubusercontent.com/37314424/162781565-3f19573e-9c32-4d03-8a76-b3a83d33158b.png">
 
 
 ## The latest and greatest boilerplate for Infinite Red opinions
