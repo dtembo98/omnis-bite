@@ -31,7 +31,7 @@ export const palette = {
   white: "#FFFFFF",
 
   // orange
-  orange: "FB923C",
+  orange: "#FB923C",
   // green
   green: "#22C55E",
 

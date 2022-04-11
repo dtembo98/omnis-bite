@@ -1,1 +1,1 @@
-export * from "./find-restraurant"
+export * from "./find-restraurant-screen"

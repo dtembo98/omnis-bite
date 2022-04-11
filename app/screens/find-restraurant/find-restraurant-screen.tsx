@@ -1,8 +1,12 @@
 import React from "react"
-import { View, StyleSheet } from "react-native"
+import { View, StyleSheet, FlatList } from "react-native"
 import { Screen, TextField, Text, Button, AutoImage } from "../../components"
 
 import { color, spacing, globalStyle } from "../../theme"
+import { Restraurants } from "../../models/fake-db"
+
+import { RestrauntCard } from "./restraurant-card"
+
 const RestrauntImage = require("../../../assets/images/restraurant.png")
 
 export const FindRestraurantScreen = () => {
@@ -27,10 +31,13 @@ export const FindRestraurantScreen = () => {
           />
         </View>
         <Button style={styles.button} textStyle={styles.buttonText} text="Use Current Location" />
-        <TextField
-          preset="withLeftIcon"
-          icon="location"
-          placeholder="Location, or restaurants..."
+        <TextField preset="withLeftIcon" icon="location" placeholder="Manhattan, New York" />
+
+        <FlatList
+          contentContainerStyle={styles.contentContainer}
+          keyExtractor={(item) => item.id.toString()}
+          data={Restraurants}
+          renderItem={({ item }) => <RestrauntCard restraurant={item} />}
         />
       </View>
     </Screen>
@@ -45,6 +52,10 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     color: color.palette.redMain,
+  },
+  contentContainer: {
+    ...globalStyle.shadow,
+    borderBottomEndRadius: 20,
   },
   image: {
     height: 115,

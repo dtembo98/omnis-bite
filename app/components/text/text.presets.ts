@@ -115,11 +115,19 @@ export const presets = {
     color: color.palette.greyScale,
     fontWeight: "600",
   } as TextStyle,
+
+  bodyMediumSemiBold: {
+    fontFamily: typography.sfProDisplaySemiBold,
+    fontSize: 14,
+    color: color.palette.greyScale,
+    fontWeight: "500",
+  } as TextStyle,
+
   bodyMediumRegular: {
     fontFamily: typography.sfProDisplay,
     fontSize: 14,
     color: color.palette.greyScale,
-    fontWeight: "500",
+    fontWeight: "600",
   } as TextStyle,
 
   bodySmall: {
@@ -127,6 +135,13 @@ export const presets = {
     fontSize: 12,
     color: color.palette.greyScale,
     fontWeight: "600",
+  } as TextStyle,
+  bodyXsmallMedium: {
+    fontFamily: typography.sfProDisplay,
+    fontSize: 10,
+    color: color.palette.greyScale,
+    fontWeight: "600",
+    lineHeight: 14,
   } as TextStyle,
 
   title: {
