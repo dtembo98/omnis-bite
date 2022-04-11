@@ -14,8 +14,9 @@ Current implemented screens:
 
 
 
-6. Code Confirmation Screen
+6. Find Restraunt Screen
 
+![Simulator Screen Shot - iPhone 12 - 2022-04-11 at 15 05 11](https://user-images.githubusercontent.com/37314424/162746620-90bba9d7-aa29-45fe-a33e-0067303fd187.png)
 
 
 
